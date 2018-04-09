@@ -1,6 +1,6 @@
 const api = {
 	makeCall(api) {
-		if (window.Worker) {
+		if (window.Worker && window.greenlet) {
 			console.log('Web Worker')
 			return this.call(api)
 		} else {
