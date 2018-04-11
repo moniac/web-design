@@ -1,4 +1,5 @@
 import api from './api.js'
+import settings from './settings.js'
 console.log(Transparency)
 
 const view = {
@@ -14,9 +15,44 @@ const view = {
 					}
 				}
 			}
-			console.log(data)
 			Transparency.render(container, data, directives)
+			
+	}).then(() => {
+		this.tagButtons()
 	})
+	
+	},
+	tagButtons() {
+		
+		const label = document.querySelector('aside svg')
+		let newButton = document.createElement('a')
+		newButton.className = 'button'
+		newButton.innerHTML = '+'
+		console.log(newButton)
+		
+		const cards = document.querySelectorAll('.card')
+
+		cards.forEach((card, i) => {
+			let newButton = document.createElement('a')
+			newButton.className = 'button'
+			newButton.innerHTML = '+'
+
+			newButton.addEventListener('click', () => {
+				this.toggleCookie()
+				label.style.transform = 'translateY(0)';
+			})
+
+			card.insertAdjacentElement('afterbegin', newButton)
+			console.log(card, i)
+		})
+		
+		label.addEventListener('click', function(e) {
+			this.parentElement.style.transform = 'translateY(0)';
+			document.querySelector('body').style.overflowY = 'hidden'
+		})
+	},
+	toggleCookie() {
+		localStorage.setItem('label', 'yes')
 	}
 }
 

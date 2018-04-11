@@ -245,12 +245,13 @@ sub {
 
 header {
     height: 3.25rem;
-	display: table;
 	line-height: 3.25rem;
     vertical-align: middle;
     background: #4A90E2;
-	width: 100%;
-	padding: 0 4rem;
+    padding: 0 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 header p {
@@ -267,6 +268,7 @@ main > section:first-of-type {
 section h1 {
     margin: 0;
     padding: 4rem 0;
+    padding-top: 7.25rem;
 	text-align: center;
 }
 
@@ -276,11 +278,69 @@ section h1 {
 }
 
 .card {
-	border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    position: relative;
 }
 
 .card a img {
 	width: 100%;
+}
+
+aside {
+    background: red;
+    transform: translateY(-100vh);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all ease 1s;
+    z-index: 3;
+    /* visibility: hidden;
+    display: none; */
+}
+
+aside svg {
+    position: absolute;
+    right: 4rem;
+    bottom: -3.2rem;
+    cursor: pointer;
+    transform: translateY(-100%);
+    transition: all ease 1s;
+}
+
+.button {
+    background: red;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform ease 0.25s;
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.25);
+}
+
+.card {
+    animation: fadeIn 0.5s;
+}
+
+input {
+    /* width: 100%; */
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @media (min-width: 40rem) {

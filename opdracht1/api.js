@@ -4,19 +4,20 @@ const api = {
 			console.log('Web Worker')
 			return this.call(api)
 		} else {
+			greenlet = null
 			console.log('No Worker')
 			return this.callMain(api)
 		}
 	},
 	call: greenlet( async (api) => {
 		let res = await fetch(api)
-		let profile = await res.json()
-		return profile
+		let data = await res.json()
+		return data
 	}),
 	callMain: async () => {
 		let res = await fetch(api)
-		let profile = await res.json()
-		return profile
+		let data = await res.json()
+		return data
 	}
 }
 
