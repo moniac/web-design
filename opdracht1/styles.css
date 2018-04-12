@@ -335,7 +335,7 @@ aside svg {
 }
 
 input {
-    /* width: 100%; */
+    width: 100%;
 }
 
 @keyframes fadeIn {
@@ -363,6 +363,7 @@ input {
 	}
 
 	#template-list li {
-		width: 33%;
+        width: 33%;
+        padding: 0 2rem;
 	}
 }
