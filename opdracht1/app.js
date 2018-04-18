@@ -1,4 +1,4 @@
-import view from './view.js'
+import view from './view.js';
 
 // if (localStorage.getItem('label')) {
 // 	console.log('ye')
@@ -10,4 +10,4 @@ import view from './view.js'
 // 	localStorage.removeItem('label')
 // }
 
-view.getPopular()
+view.getPopular();
