@@ -4,17 +4,23 @@
 	"private": true,
 	"license": "MIT",
 	"scripts": {
-		"dev": "yarn run kek && yarn run watch",
-		"watch": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+		"dev":
+			"parallelshell 'yarn run clean' 'yarn run copy' 'yarn run watch' 'yarn run watch:css' 'yarn run serve'",
+		"start": "yarn run dev",
 		"clean": "rimraf ./dist",
-		"build": "yarn run build:js ",
+		"copy": "cpx ./src/*.html ./dist/ --watch --verbose",
+		"build":
+			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:js' 'yarn run build:css'  ",
 		"build:js":
-			"yarn run kek && browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js && yarn run build:css",
-		"start": "yarn run watch",
+			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
 		"build:css":
-			"postcss ./src/styles/input.css -o ./dist/styles/output.css --verbose",
-		"ok": "cpx './src/index.html' 'dist'",
-		"kek": "htmlprocessor ./src/index.html -o './dist/'"
+			"postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
+		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
+		"serve":
+			"browser-sync start --server -f 'src/*' --index './dist/index.html'",
+		"watch": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+		"watch:css":
+			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
@@ -22,14 +28,18 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-env": "^1.6.1",
 		"babelify": "^8.0.0",
+		"browser-sync": "^2.23.6",
 		"browserify": "^16.1.1",
 		"cpx": "^1.5.0",
 		"cssnano": "^3.10.0",
 		"htmlprocessor": "^0.2.6",
 		"npm-run-all": "^4.1.2",
+		"onchange": "^3.3.0",
+		"parallelshell": "^3.0.2",
 		"postcss-cli": "^5.0.0",
 		"postcss-cssnext": "^3.1.0",
 		"postcss-custom-properties": "^7.0.0",
+		"postcss-discard-comments": "^2.0.4",
 		"postcss-import": "^11.1.0",
 		"postcss-nesting": "^4.2.1",
 		"postcss-uncss": "^0.16.1",
