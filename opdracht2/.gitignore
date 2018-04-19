@@ -1,6 +1,0 @@
-.env
-.npmrc
-dist.js
-coverage
-node_modules
-dist.js.tmp*

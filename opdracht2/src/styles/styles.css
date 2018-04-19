@@ -1,6 +1,6 @@
 @import './components/_normalize.css';
 :root {
-    --red: blue;
+    --red: orange;
 }
 
 body {

@@ -1,26 +1,26 @@
 {
 	"name": "browserify-babel-async-await-demo",
 	"description": "",
-	"private": true,
 	"license": "MIT",
 	"scripts": {
-		"dev":
-			"parallelshell 'yarn run clean' 'yarn run copy' 'yarn run watch' 'yarn run watch:css' 'yarn run serve'",
-		"start": "yarn run dev",
-		"clean": "rimraf ./dist",
-		"copy": "cpx ./src/*.html ./dist/ --watch --verbose",
 		"build":
 			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' && yarn run build:js",
+		"start": "yarn run dev",
+		"dev":
+			"parallelshell 'yarn run clean' 'yarn run watch:js' 'yarn run watch:css' 'yarn run build:html' 'yarn run watch:html' 'yarn run serve'",
+		"clean": "rimraf ./dist/*",
+		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
 		"build:js":
 			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
 		"build:css":
 			"postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
-		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
-		"serve":
-			"browser-sync start --server -f 'src/*' --index './dist/index.html'",
-		"watch": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+		"watch:js":
+			"watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
 		"watch:css":
-			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w"
+			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
+		"watch:html": "onchange './src/*.html' -- yarn run build:html",
+		"serve":
+			"browser-sync start --server -f './dist/*.html' './dist/styles/*' --ss ./dist --index ./dist/index.html"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
