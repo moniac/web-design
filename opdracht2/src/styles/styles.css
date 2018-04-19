@@ -1,11 +1,6 @@
-@import './components/_normalize.css';
-:root {
-    --red: orange;
-}
-
+@import './reset/_normalize.css';
+@import './components/_settings.css';
 body {
-    display: flex;
-    height: 4rem;
     color: var(--red);
 }
 
@@ -15,4 +10,10 @@ main {
     margin-right: 20px;
     margin-bottom: 9px;
     margin-left: 20px;
+}
+
+header {
+    background: var(--yellow);
+    width: 100%;
+    height: 3.25rem;
 }

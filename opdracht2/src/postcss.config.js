@@ -17,9 +17,6 @@ module.exports = {
 			discardComments: {
 				removeAll: true
 			}
-		}),
-		require('cssnano')({
-			autoprefixer: false
 		})
 	]
 }
