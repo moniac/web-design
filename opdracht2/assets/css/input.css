@@ -1,9 +1,0 @@
-:root {
-	--red: red;
-}
-
-body {
-	display: flex;
-	height: 4rem;
-	color: var(--red);
-}
