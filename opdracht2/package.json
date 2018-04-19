@@ -10,7 +10,7 @@
 		"clean": "rimraf ./dist",
 		"copy": "cpx ./src/*.html ./dist/ --watch --verbose",
 		"build":
-			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:js' 'yarn run build:css'  ",
+			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' && yarn run build:js",
 		"build:js":
 			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
 		"build:css":

@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin/node /Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin/yarn run build:html
+  /Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin/node /Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin/yarn run build
 
 PATH: 
-  /Users/mohammedmulazada/Documents/web-minor/web-design/opdracht2/node_modules/.bin:/Users/mohammedmulazada/.config/yarn/link/node_modules/.bin:/Users/mohammedmulazada/Documents/web-minor/web-design/opdracht2/node_modules/.bin:/Users/mohammedmulazada/.config/yarn/link/node_modules/.bin:/Users/mohammedmulazada/.nvm/versions/node/v9.2.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/mohammedmulazada/.nvm/versions/node/v9.2.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /Users/mohammedmulazada/.nvm/versions/node/v9.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.5.1
@@ -21,11 +21,12 @@ npm manifest:
   	"license": "MIT",
   	"scripts": {
   		"dev":
-  			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch' 'yarn run watch:css' 'yarn run serve'",
+  			"parallelshell 'yarn run clean' 'yarn run copy' 'yarn run watch' 'yarn run watch:css' 'yarn run serve'",
   		"start": "yarn run dev",
   		"clean": "rimraf ./dist",
+  		"copy": "cpx ./src/*.html ./dist/ --watch --verbose",
   		"build":
-  			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:js' 'yarn run build:css'  ",
+  			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' & 'yarn run build:js'",
   		"build:js":
   			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
   		"build:css":
@@ -54,6 +55,7 @@ npm manifest:
   		"postcss-cli": "^5.0.0",
   		"postcss-cssnext": "^3.1.0",
   		"postcss-custom-properties": "^7.0.0",
+  		"postcss-discard-comments": "^2.0.4",
   		"postcss-import": "^11.1.0",
   		"postcss-nesting": "^4.2.1",
   		"postcss-uncss": "^0.16.1",
@@ -5670,9 +5672,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 127
   Command: sh
-  Arguments: -c htmlprocessor ./src/*.html -o './dist/'
+  Arguments: -c parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' & 'yarn run build:js'
   Directory: /Users/mohammedmulazada/Documents/web-minor/web-design/opdracht2
   Output:
   
