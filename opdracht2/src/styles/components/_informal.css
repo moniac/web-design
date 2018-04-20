@@ -5,7 +5,8 @@ body > section:last-of-type {
 		text-align: center;
 		margin: 0 auto;
 		margin-bottom: 1.4rem;
-		max-width: 40rem;
 		display: block;
+		width: 100%;
+		max-width: 40rem;
 	}
 }

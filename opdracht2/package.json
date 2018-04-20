@@ -7,7 +7,7 @@
 			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
 		"start": "yarn run dev",
 		"dev":
-			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html' ",
+			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html'",
 		"clean": "rimraf ./dist/*",
 		"copy": "copyfiles -u 1 ./src/img/**/** ./dist",
 		"copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
@@ -38,7 +38,6 @@
 		"copyfiles": "^2.0.0",
 		"cssnano": "^3.10.0",
 		"htmlprocessor": "^0.2.6",
-		"npm-run-all": "^4.1.2",
 		"onchange": "^3.3.0",
 		"parallelshell": "^3.0.2",
 		"postcss-cli": "^5.0.0",
