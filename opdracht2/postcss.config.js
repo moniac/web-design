@@ -2,6 +2,12 @@ module.exports = {
 	plugins: [
 		require('postcss-import'),
 		require('postcss-nesting'),
+		require('postcss-discard-comments')({
+			discardComments: {
+				removeAll: true
+			}
+		}),
+		require('postcss-custom-media'),
 		require('postcss-uncss')({
 			html: ['./src/*.html']
 		}),
@@ -11,14 +17,9 @@ module.exports = {
 				rem: true,
 				customProperties: {
 					strict: false,
-					warnings: true,
+					warnings: false,
 					preserve: true
 				}
-			}
-		}),
-		require('postcss-discard-comments')({
-			discardComments: {
-				removeAll: true
 			}
 		}),
 		require('cssnano')({

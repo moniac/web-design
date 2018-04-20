@@ -5,17 +5,123 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="./styles/styles.css">
-	<title>Document</title>
+	<link rel="preload" href="./styles/styles.css" as="style" onload="this.rel='stylesheet'">
+	<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ ! function (a) {
+			"use strict";
+			var b = function (b, c, d) {
+				function j(a) {
+					if (e.body) return a();
+					setTimeout(function () {
+						j(a)
+					})
+				}
+
+				function l() {
+					f.addEventListener && f.removeEventListener("load", l), f.media = d || "all"
+				}
+				var g, e = a.document,
+					f = e.createElement("link");
+				if (c) g = c;
+				else {
+					var h = (e.body || e.getElementsByTagName("head")[0]).childNodes;
+					g = h[h.length - 1]
+				}
+				var i = e.styleSheets;
+				f.rel = "stylesheet", f.href = b, f.media = "only x", j(function () {
+					g.parentNode.insertBefore(f, c ? g : g.nextSibling)
+				});
+				var k = function (a) {
+					for (var b = f.href, c = i.length; c--;)
+						if (i[c].href === b) return a();
+					setTimeout(function () {
+						k(a)
+					})
+				};
+				return f.addEventListener && f.addEventListener("load", l), f.onloadcssdefined = k, k(l), f
+			};
+			"undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+		}("undefined" != typeof global ? global : this);
+		/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+		! function (a) {
+			if (a.loadCSS) {
+				var b = loadCSS.relpreload = {};
+				if (b.support = function () {
+						try {
+							return a.document.createElement("link").relList.supports("preload")
+						} catch (a) {
+							return !1
+						}
+					}, b.poly = function () {
+						for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+							var d = b[c];
+							"preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel =
+								null)
+						}
+					}, !b.support()) {
+					b.poly();
+					var c = a.setInterval(b.poly, 300);
+					a.addEventListener && a.addEventListener("load", function () {
+						b.poly(), a.clearInterval(c)
+					}), a.attachEvent && a.attachEvent("onload", function () {
+						a.clearInterval(c)
+					})
+				}
+			}
+		}(this);
+	</script>
+	<noscript>
+		<link rel="stylesheet" href="./styles/styles.css">
+	</noscript>
+	<title>Everything Web</title>
 </head>
 
 <body>
 
 	<header>
-
+		<ul>
+			<li>
+				<a href="">
+					<img src="./img/icons/cmd_hva_logo_black.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="#NL" class="active">NL </a>
+				<a href="#ENG">/ ENG</a>
+			</li>
+			<li>
+				<a href="">Log In</a>
+			</li>
+		</ul>
+		<footer>
+			<p>Aanmelden kan vanaf 22 september</p>
+		</footer>
 	</header>
 
-	<p>This is working!</p>
+	<section>
+		<h1>Minor
+			<span>Web Development</span>
+		</h1>
+		<img src="./img/icons/cmd_icon_laptop.svg" alt="">
+		<p>
+			Deze minor leert je interactieve toepassingen maken met de webtechnologieën: HTML, CSS en JavaScript. In verschillende vakken
+			en projecten leer je over browsers, het ‘real time web’, internet of things, performance, rapid prototyping, usability,
+			documenteren, versiebeheer, debuggen, testen, responsive, reactive, micro interacties, API’s en nog veel meer.
+		</p>
+	</section>
+
+	<figure>
+		<img src="./img/icons/cmd_icon_wifi.svg" alt="">
+	</figure>
+
+	<section>
+		<img src="./img/icons/cmd_hva_logo_black_full.svg" alt="">
+		<p>
+			De minor wordt aangeboden door de opleiding CMD van de Hogeschool van Amsterdam. CMD Amsterdam is een ontwerpopleiding digital
+			design met drie focuspunten: interaction design, visual design en front-end development. De minor sluit aan bij het profiel
+			Front-end developer.
+		</p>
+	</section>
 
 	<!-- build:js ./bundle.js -->
 	<script src="./index.js"></script>

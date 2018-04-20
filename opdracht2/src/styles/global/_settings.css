@@ -1,0 +1,30 @@
+@custom-media --phone (min-width: 34rem);
+@custom-media --tablet (min-width: 48rem);
+@custom-media --desktop (min-width: 62rem);
+
+:root {
+	--MainYellow: #ffce00;
+	--MainLightGray: #333333;
+	--MainBlack: #000000;
+	--MainRed: #db2b39;
+	--Margin-Dynamic: 0 2rem;
+	--Margin-Bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+	:root {
+		--Margin-Dynamic: 0 4rem;
+	}
+}
+
+html,
+body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	letter-spacing: 0.4px;
+}
+
+.active {
+	font-weight: 600;
+	color: var(--MainBlack);
+}

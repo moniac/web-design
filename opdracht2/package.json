@@ -1,24 +1,29 @@
 {
-	"name": "browserify-babel-async-await-demo",
+	"name": "web-design",
 	"description": "",
 	"license": "MIT",
 	"scripts": {
 		"build":
-			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' && yarn run build:js",
+			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
 		"start": "yarn run dev",
 		"dev":
-			"parallelshell 'yarn run clean' 'yarn run watch:js' 'yarn run watch:css' 'yarn run build:html' 'yarn run watch:html' 'yarn run serve'",
+			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html' ",
 		"clean": "rimraf ./dist/*",
+		"copy": "copyfiles -u 1 ./src/img/**/** ./dist",
+		"copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
 		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
 		"build:js":
 			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
 		"build:css":
 			"postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
+		"watch:img":
+			"onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
 		"watch:js":
 			"watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
 		"watch:css":
 			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
 		"watch:html": "onchange './src/*.html' -- yarn run build:html",
+		"watch:fonts": "onchange './src/fonts/*' -- yarn run copy:fonts",
 		"serve":
 			"browser-sync start --server -f './dist/*.html' './dist/styles/*' --ss ./dist --index ./dist/index.html"
 	},
@@ -30,6 +35,7 @@
 		"babelify": "^8.0.0",
 		"browser-sync": "^2.23.6",
 		"browserify": "^16.1.1",
+		"copyfiles": "^2.0.0",
 		"cpx": "^1.5.0",
 		"cssnano": "^3.10.0",
 		"htmlprocessor": "^0.2.6",
@@ -38,9 +44,11 @@
 		"parallelshell": "^3.0.2",
 		"postcss-cli": "^5.0.0",
 		"postcss-cssnext": "^3.1.0",
+		"postcss-custom-media": "^6.0.0",
 		"postcss-custom-properties": "^7.0.0",
 		"postcss-discard-comments": "^2.0.4",
 		"postcss-import": "^11.1.0",
+		"postcss-modules": "^1.1.0",
 		"postcss-nesting": "^4.2.1",
 		"postcss-uncss": "^0.16.1",
 		"rimraf": "^2.6.2",

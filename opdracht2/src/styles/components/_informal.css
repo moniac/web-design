@@ -1,0 +1,9 @@
+body > section:last-of-type {
+	margin: var(--Margin-Dynamic);
+
+	& img {
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 1.4rem;
+	}
+}

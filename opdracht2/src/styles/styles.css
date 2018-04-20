@@ -1,19 +1,7 @@
 @import './reset/_normalize.css';
-@import './components/_settings.css';
-body {
-    color: var(--red);
-}
-
-main {
-    background: green;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 9px;
-    margin-left: 20px;
-}
-
-header {
-    background: var(--yellow);
-    width: 100%;
-    height: 3.25rem;
-}
+@import './global/_settings.css';
+@import './global/_fontstylesheet.css';
+@import './components/_header.css';
+@import './components/_introduction.css';
+@import './components/_separate.css';
+@import './components/_informal.css';

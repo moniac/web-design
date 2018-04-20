@@ -1,0 +1,7 @@
+body > figure:first-of-type {
+	background: var(--MainYellow);
+	text-align: center;
+	padding: 2rem;
+	padding-bottom: 1.8rem;
+	margin-bottom: var(--Margin-Bottom);
+}
