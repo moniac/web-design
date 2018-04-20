@@ -25,7 +25,7 @@
 		"watch:html": "onchange './src/*.html' -- yarn run build:html",
 		"watch:fonts": "onchange './src/fonts/*' -- yarn run copy:fonts",
 		"serve":
-			"browser-sync start --server -f './dist/*.html' './dist/styles/*' --ss ./dist --index ./dist/index.html"
+			"browser-sync start --server -f './dist/*.html' './dist/styles/*' './dist/**/*' --ss ./dist --index ./dist/index.html"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
@@ -36,7 +36,6 @@
 		"browser-sync": "^2.23.6",
 		"browserify": "^16.1.1",
 		"copyfiles": "^2.0.0",
-		"cpx": "^1.5.0",
 		"cssnano": "^3.10.0",
 		"htmlprocessor": "^0.2.6",
 		"npm-run-all": "^4.1.2",
@@ -45,7 +44,6 @@
 		"postcss-cli": "^5.0.0",
 		"postcss-cssnext": "^3.1.0",
 		"postcss-custom-media": "^6.0.0",
-		"postcss-custom-properties": "^7.0.0",
 		"postcss-discard-comments": "^2.0.4",
 		"postcss-import": "^11.1.0",
 		"postcss-modules": "^1.1.0",
