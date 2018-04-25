@@ -1,6 +1,12 @@
 body > section:first-of-type {
 	margin: var(--Margin-Dynamic);
 	margin-bottom: 2rem;
+	max-width: 40rem;
+
+	@media (--desktop) {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	& h1 {
 		font-size: 1.6125rem;

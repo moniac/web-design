@@ -1,12 +1,15 @@
 body > header:first-of-type {
-	background: var(--MainYellow);
 	margin-bottom: 2rem;
-
+	position: sticky;
+	top: 0;
 	& > ul {
 		display: flex;
-		margin: var(--Margin-Dynamic);
+		padding: var(--Padding-Dynamic);
 		height: 3.25rem;
 		align-items: center;
+		position: relative;
+		background: var(--MainYellow);
+		z-index: 2;
 
 		& li {
 			display: inline-block;
@@ -27,18 +30,58 @@ body > header:first-of-type {
 
 			&:nth-of-type(2) {
 				margin-left: auto;
-				margin-right: 1rem;
 			}
 		}
 	}
 
 	& footer {
+		transform: translateY(-100%);
 		width: 100%;
 		text-align: center;
-		background: var(--MainRed);
 		height: 3.25rem;
 		color: white;
 		font-weight: 600;
 		line-height: 3.25rem;
+		z-index: 1;
+		animation: mymove ease-out;
+		animation-duration: 0.5s;
+		animation-iteration-count: 1;
+		transform: translateY(0%);
+		font-size: 1.125rem;
+		position: relative;
+
+		&.open {
+			background: var(--MainBlue);
+		}
+
+		&.warning {
+			background: var(--MainRed);
+		}
+
+		& p {
+			display: inline-block;
+			text-align: center;
+
+			&:last-of-type {
+				position: absolute;
+				right: 2rem;
+				cursor: pointer;
+				top: 0;
+				@media (--phone) {
+					right: 4rem;
+				}
+			}
+		}
+
+		& a {
+			text-decoration: none;
+			color: white;
+			font-weight: 600;
+			line-height: 3.25rem;
+
+			&:focus {
+				text-decoration: underline;
+			}
+		}
 	}
 }

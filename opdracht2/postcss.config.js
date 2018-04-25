@@ -8,9 +8,6 @@ module.exports = {
 			}
 		}),
 		require('postcss-custom-media'),
-		require('postcss-uncss')({
-			html: ['./src/*.html']
-		}),
 		require('postcss-cssnext')({
 			browsers: ['ie >= 8'],
 			features: {

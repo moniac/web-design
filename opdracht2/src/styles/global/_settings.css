@@ -7,13 +7,16 @@
 	--MainLightGray: #333333;
 	--MainBlack: #000000;
 	--MainRed: #db2b39;
+	--MainBlue: #38aecc;
 	--Margin-Dynamic: 0 2rem;
+	--Padding-Dynamic: 0 2rem;
 	--Margin-Bottom: 2rem;
 }
 
 @media (min-width: 48rem) {
 	:root {
 		--Margin-Dynamic: 0 4rem;
+		--Padding-Dynamic: 0 4rem;
 	}
 }
 
@@ -22,9 +25,35 @@ body {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	line-height: 1.5;
 	letter-spacing: 0.3px;
+	scroll-behavior: smooth;
 }
 
 .active {
 	font-weight: 600;
 	color: var(--MainBlack);
+}
+
+@keyframes mymove {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.headroom {
+	will-change: transform !important;
+	transition: transform 300ms linear;
+}
+.headroom--pinned {
+	transform: translateY(0%) !important;
+}
+.headroom--unpinned {
+	transform: translateY(-100%) !important;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
 }

@@ -1,0 +1,94 @@
+.signup {
+	margin-bottom: 4rem;
+
+	& .feiten {
+		display: flex;
+		justify-content: center;
+		margin: var(--Margin-Dynamic);
+		& h3 {
+			font-size: 4rem;
+			color: var(--MainLightGray);
+			font-weight: bold;
+		}
+	}
+
+	& > h3 {
+		font-size: 4rem;
+		color: var(--MainLightGray);
+		font-weight: bold;
+		margin: var(--Margin-Dynamic);
+		padding-top: 8rem;
+		line-height: 1.4;
+		display: block;
+
+		@media (--tablet) {
+			margin: 0 auto;
+			width: 30rem;
+		}
+
+		& span {
+			display: block;
+			font-size: 1.6125rem;
+		}
+	}
+
+	& .marker {
+		background: var(--MainYellow);
+		padding: var(--Padding-Dynamic);
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		display: inline-block;
+		font-size: 1.6125rem;
+		font-weight: bold;
+		color: var(--MainLightGray);
+		margin-bottom: 2rem;
+		float: right;
+		display: block;
+	}
+
+	& form {
+		display: block;
+		max-width: 20rem;
+		margin: 0 auto;
+		padding-top: 4rem;
+
+		& label {
+			display: block;
+			font-size: 1.6125rem;
+			font-weight: bold;
+			color: var(--MainLightGray);
+
+			& input {
+				display: block;
+				width: 100%;
+				border: none;
+				border-radius: 0.4rem;
+				border: 1px solid #979797;
+				padding: 1rem;
+				box-sizing: border-box;
+				margin: 0.5rem 0;
+			}
+
+			& textarea {
+				display: block;
+				width: 100%;
+				border: none;
+				border-radius: 0.4rem;
+				border: 1px solid #979797;
+				margin: 0.5rem 0;
+			}
+		}
+
+		& > input:last-of-type {
+			background: var(--MainYellow);
+			width: 100%;
+			font-size: 1.6125rem;
+			font-weight: bold;
+			color: var(--MainLightGray);
+			padding: 1rem;
+			margin-top: 1rem;
+			border: none;
+			border-radius: 0.4rem;
+		}
+	}
+}
