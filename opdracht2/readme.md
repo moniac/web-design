@@ -36,15 +36,15 @@ This section will detail the principles I have tried to incorporate into my desi
 
 1.  Clarity is job #1
 
-    The website should immediately convey what it is and what it's for. \
+    The website should immediately convey what it is and what it's for.
 
 2.  Consistency matters
 
-    Incorporate the same paddings and margins everywhere, so everything is visually coherent. \
+    Incorporate the same paddings and margins everywhere, so everything is visually coherent.
 
 3.  Strong visual hierarchies work best
 
-    Working with large font sizes, you can help guide the reader to what is important. \
+    Working with large font sizes, you can help guide the reader to what is important.
 
 ---
 
