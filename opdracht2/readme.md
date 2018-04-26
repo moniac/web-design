@@ -1,13 +1,17 @@
 # Opdracht 2
 
+[View the website](https://moniac.github.io/web-design/opdracht2/dist/index.html)
+
 # Introduction
 
 This is a project where the website that I am making will be geared towards people who want to apply for a minor. One of the people I am designing for is deaf and will be giving me pointers on how to make my website more accessible.
 
-## Table of Content
+## Table of Contents
 
-*   [](#)
-*   [](#)
+*   [User Scenario's](#user-scenario)
+*   [Breaking it down](#breaking-it-down)
+*   [User Interface Principles](#user-interface-principles)
+*   [A first design](#a-first-design)
 
 ---
 
@@ -34,15 +38,15 @@ This means that for my product I will have to find a balance between just enough
 
 This section will detail the principles I have tried to incorporate into my design.
 
-1.  Clarity is job #1
+1.  **Clarity is job #1**
 
     The website should immediately convey what it is and what it's for.
 
-2.  Consistency matters
+2.  **Consistency matters**
 
     Incorporate the same paddings and margins everywhere, so everything is visually coherent.
 
-3.  Strong visual hierarchies work best
+3.  **Strong visual hierarchies work best**
 
     Working with large font sizes, you can help guide the reader to what is important.
 
@@ -51,15 +55,40 @@ This section will detail the principles I have tried to incorporate into my desi
 ## A first design
 
 <details>
-<summary>The mobile design</summary>
+<summary>The mobile design
+</summary>
+This design is focused on getting the information as soon as possible.
 
-![Mobile design](design/mobile.jpg)
+![Mobile design](images/design/mobile.jpg)
 
 </details>
 
 <details>
 <summary>The tablet design</summary>
+This design offers more fun elements.
 
-![Tablet design](design/tablet.jpg)
+![Tablet design](images/design/tablet.jpg)
+
+</details>
+
+---
+
+## Testing
+
+<details>
+<summary>Testing with Marie
+</summary>
+
+[Watch the test video with Marie](https://youtu.be/36T3NtQpVuw)
+
+![Marie](images/marie/button.png)
+
+Marie initally clicked on this yellow marker, which was intended as a title but looked too much like a button!
+
+![Marie](images/marie/button-detail.png)
+
+A solution would be to make it more obvious that this is just a title.
+
+![Marie](images/marie/button.png)
 
 </details>
