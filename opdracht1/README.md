@@ -1,12 +1,10 @@
 # web-design
 
+## General
+
+The idea of this project is to make a website where someone can add movies to a 'must watch later' list.
+
 8.  Provide a natural next step
-    <details>
-<summary>After Optimizing </summary>
-
-![After](https://i.imgur.com/xlHdd31.jpg)
-
-</details>
 
 11. Strong visual hierarchies work best
 
