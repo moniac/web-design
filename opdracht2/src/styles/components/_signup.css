@@ -10,6 +10,10 @@
 			font-size: 4rem;
 			color: var(--MainLightGray);
 			font-weight: bold;
+			margin-bottom: 0;
+		}
+		& p {
+			margin: 0;
 		}
 	}
 
@@ -20,6 +24,7 @@
 		margin: var(--Margin-Dynamic);
 		padding-top: 4rem;
 		margin-bottom: 4rem;
+		margin-bottom: 0;
 		line-height: 1.4;
 		display: block;
 
