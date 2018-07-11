@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preload" href="./styles/styles.css" as="style" onload="this.rel='stylesheet'">
+	<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ ! function (a) {
+			"use strict";
+			var b = function (b, c, d) {
+				function j(a) {
+					if (e.body) return a();
+					setTimeout(function () {
+						j(a)
+					})
+				}
+
+				function l() {
+					f.addEventListener && f.removeEventListener("load", l), f.media = d || "all"
+				}
+				var g, e = a.document,
+					f = e.createElement("link");
+				if (c) g = c;
+				else {
+					var h = (e.body || e.getElementsByTagName("head")[0]).childNodes;
+					g = h[h.length - 1]
+				}
+				var i = e.styleSheets;
+				f.rel = "stylesheet", f.href = b, f.media = "only x", j(function () {
+					g.parentNode.insertBefore(f, c ? g : g.nextSibling)
+				});
+				var k = function (a) {
+					for (var b = f.href, c = i.length; c--;)
+						if (i[c].href === b) return a();
+					setTimeout(function () {
+						k(a)
+					})
+				};
+				return f.addEventListener && f.addEventListener("load", l), f.onloadcssdefined = k, k(l), f
+			};
+			"undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+		}("undefined" != typeof global ? global : this);
+		/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+		! function (a) {
+			if (a.loadCSS) {
+				var b = loadCSS.relpreload = {};
+				if (b.support = function () {
+						try {
+							return a.document.createElement("link").relList.supports("preload")
+						} catch (a) {
+							return !1
+						}
+					}, b.poly = function () {
+						for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+							var d = b[c];
+							"preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel =
+								null)
+						}
+					}, !b.support()) {
+					b.poly();
+					var c = a.setInterval(b.poly, 300);
+					a.addEventListener && a.addEventListener("load", function () {
+						b.poly(), a.clearInterval(c)
+					}), a.attachEvent && a.attachEvent("onload", function () {
+						a.clearInterval(c)
+					})
+				}
+			}
+		}(this);
+	</script>
+	<noscript>
+		<link rel="stylesheet" href="./styles/styles.css">
+	</noscript>
+	<title>Everything Web</title>
+</head>
+
+<body>
+
+	<header>
+		<ul>
+			<li>
+				<a href="index.html">
+					<img src="./img/icons/cmd_hva_logo_black.svg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="index.html">Home </a>
+				<a href="skills.html">Vereisten </a>
+				<a href="progamma.html" class="active">Progamma </a>
+				<a href="contact.html">Contact </a>
+			</li>
+		</ul>
+	</header>
+
+	<h2 class="marker">Programma</h2>
+
+	<div class="skills">
+		<p>Dit zijn de vakken waar je mee te maken krijgt. Na 2 vakken per keer krijg je een project waar je de geleerde skills kunt toetsen. Aan het eind is een meesterproef van 5 weken waar je al je skills zult moeten toepassen.</p>
+		<h1>Blok 1</h1>
+		<details>
+			<summary>Web Apps From Scratch</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>In dit vak gaan we een web app maken zonder frameworks of onnodige libraries, dus zoveel mogelijk met native HTML, CSS
+					& JavaScript. Het eindproduct is een modulair opgezet prototype voor een single page web app. Data wordt opgehaald uit
+					een externe API, waar nodig gemanipuleerd en vervolgens getoond in de Web App. Je leert hoe je structuur aanbrengt in
+					je code en hoe je hiermee 'from scratch' een (prototype voor een) web app maakt. Met deze kennis begrijp je daarnaast
+					beter hoe bestaande api’s, libraries en frameworks werken.</p>
+				<h3>Docenten</h3>
+				<p>Joost Faber & Laurens Aarnoudse</p>
+				<h3>Leerdoelen</h3>
+				<ol>
+					<li>Student kan JavaScript OOP en/of Functional Programming principes toepassen (minimaal object literal pattern)</li>
+					<li>Student kan met JavaScript data ophalen vanuit een API, manipuleren en tonen in een web app</li>
+					<li>Student kan met JavaScript interactie toevoegen aan een web app</li>
+				</ol>
+			</div>
+		</details>
+
+		<details>
+			<summary>CSS To The Rescue</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>In dit vak gaan we aan de slag met CSS. We gaan goed werkende, plezierige responsive oplossingen bedenken én maken voor
+					complexe interfaces. Dat is erg belangrijk, te veel ontwerpers kunnen dit niet zo goed. Het is ook belangrijk om een
+					aantal basisprincipes achter CSS goed te begrijpen. Niet alleen op praktisch niveau, ook op experimenteel niveau. Zonder
+					goed begrip van de basisprincipes is CSS magisch en weird. Met een goed begrip heb je CSS onder controle en kan je het
+					laten doen wat jij wil. En dat is nodig om webpagina’s vorm te geven met attention to detail. Webpagina’s waar mensen
+					blij van worden.</p>
+				<h3>Docenten</h3>
+				<p>Vasilis van Gemert & Titus Wormer</p>
+			</div>
+		</details>
+
+		<h1>Blok 2</h1>
+		<details>
+			<summary>Browser Technologies</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser
+					moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit
+					gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische
+					beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de
+					hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ...</p>
+				<p>In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive
+					Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.</p>
+				<h3>Docenten</h3>
+				<p>Koop Reijnders & Krijn Hoetmer</p>
+			</div>
+		</details>
+
+		<details>
+			<summary>Performance Matters</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>In deze drie weken gaan we van bestaande web applicaties de performance verbeteren. We werken aan HTML, CSS en JavaScript
+					optimalistaties en hoe we het HTTP protocol beter kunnen benutten.</p>
+				<h3>Docenten</h3>
+				<p>Joost Faber & Titus Wormer</p>
+				<h3>Leerdoelen</h3>
+				<ol>
+					<li>De student begrijpt de termen critical rendering path en perceived performance</li>
+					<li>De student kan verschillende tools inzetten om de performance van web apps te meten, en om optimalisaties te documenteren</li>
+					<li>De student kan op code niveau optimalisaties doen tbv een betere performance van web apps</li>
+					<li>De student begrijpt het verschil tussen server side en client side rendering en wat het effect is op de performance
+						van web apps, als deze worden gecombineerd</li>
+					<li>De student kan een task manager inzetten tbv een betere performance van web apps</li>
+					<li>De student kan een service worker inzetten tbv een betere performance van web apps</li>
+				</ol>
+			</div>
+		</details>
+		<h1>Blok 3</h1>
+		<details>
+			<summary>Web Design</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>In dit vak gaan we rapid prototypen en testen met echte gebruikers. Is er goede interactie? Zijn er goede design patterns
+					gekozen? Zijn de basis regels van user interface design goed toegepast? Is er een focus op de core functionaliteit?
+				</p>
+				<h3>Docenten</h3>
+				<p>Koop Reynders, Joost Faber & Vasilis van Gemert</p>
+				<h3>Leerdoelen</h3>
+				<ol>
+					<li>Interface design principles snappen en toepassen</li>
+					<li>Leren hoe je moet (Usability) testen en de resultaten gebruiken voor het verbeteren van je ontwerp</li>
+					<li>User needs begrijpen en gebruiken in je ontwerp</li>
+				</ol>
+			</div>
+		</details>
+
+		<details>
+			<summary>Real-Time Web</summary>
+			<div>
+				<h3>Intentie van het vak</h3>
+				<p>De komende drie weken leer je hoe je real time/ live data op een inzichtelijke manier toegankelijk kunt maken. Terwijl
+					je bij het vak ‘Web of Things’ leert hoe je sensor data uit “slimme” devices kunt lezen en deze devices zelfs kunt aansturen,
+					ga je bij RTW precies dit soort data real-time inzichtelijk en toegankelijk maken voor eindgebruikers.</p>
+				<h3>Docenten</h3>
+				<p>Laurens Aarnoudse & Titus Wormer</p>
+				<h3>Leerdoelen</h3>
+				<ol>
+					<li>Student kan zelfstandig een (Node) webapp bouwen met een backend die gebruikt maakt van templating, routing en een remote
+						database.
+					</li>
+					<li>Student kan een live applicatie opleveren waar interactie mee mogelijk is die invloed heeft op de inhoud van de applicatie
+						via manipulatie van de database.</li>
+					<li>Student kan live data vertalen naar een reactive view (datavisualisatie mag) op een manier die voor een eindgebruiker
+						zinnig is.
+					</li>
+				</ol>
+			</div>
+		</details>
+	</div>
+
+	<div class="footer">
+			<a href="index.html" class="marker button">Home</a>
+			<a href="contact.html" class="marker button">Contact</a>
+		</div>
+
+</body>
+
+</html>

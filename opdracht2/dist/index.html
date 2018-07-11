@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preload" href="./styles/styles.css" as="style" onload="this.rel='stylesheet'">
+	<script>
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */ ! function (a) {
+			"use strict";
+			var b = function (b, c, d) {
+				function j(a) {
+					if (e.body) return a();
+					setTimeout(function () {
+						j(a)
+					})
+				}
+
+				function l() {
+					f.addEventListener && f.removeEventListener("load", l), f.media = d || "all"
+				}
+				var g, e = a.document,
+					f = e.createElement("link");
+				if (c) g = c;
+				else {
+					var h = (e.body || e.getElementsByTagName("head")[0]).childNodes;
+					g = h[h.length - 1]
+				}
+				var i = e.styleSheets;
+				f.rel = "stylesheet", f.href = b, f.media = "only x", j(function () {
+					g.parentNode.insertBefore(f, c ? g : g.nextSibling)
+				});
+				var k = function (a) {
+					for (var b = f.href, c = i.length; c--;)
+						if (i[c].href === b) return a();
+					setTimeout(function () {
+						k(a)
+					})
+				};
+				return f.addEventListener && f.addEventListener("load", l), f.onloadcssdefined = k, k(l), f
+			};
+			"undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+		}("undefined" != typeof global ? global : this);
+		/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+		! function (a) {
+			if (a.loadCSS) {
+				var b = loadCSS.relpreload = {};
+				if (b.support = function () {
+						try {
+							return a.document.createElement("link").relList.supports("preload")
+						} catch (a) {
+							return !1
+						}
+					}, b.poly = function () {
+						for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+							var d = b[c];
+							"preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel =
+								null)
+						}
+					}, !b.support()) {
+					b.poly();
+					var c = a.setInterval(b.poly, 300);
+					a.addEventListener && a.addEventListener("load", function () {
+						b.poly(), a.clearInterval(c)
+					}), a.attachEvent && a.attachEvent("onload", function () {
+						a.clearInterval(c)
+					})
+				}
+			}
+		}(this);
+	</script>
+	<noscript>
+		<link rel="stylesheet" href="./styles/styles.css">
+	</noscript>
+	<title>Everything Web</title>
+</head>
+
+<body>
+
+
+
+	<header>
+		<ul>
+				<li>
+						<a href="index.html">
+							<img src="./img/icons/cmd_hva_logo_black.svg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="index.html" class="active">Home </a>
+						<a href="skills.html">Vereisten </a>
+						<a href="progamma.html">Progamma </a>
+						<a href="contact.html">Contact </a>
+					</li>
+		</ul>
+		<!-- <footer class="open">
+			<p>
+				<a href="#signup" focus>Je kunt je nu aanmelden!</a>
+			</p>
+			<p class="closesignup">X</p>
+		</footer> -->
+	</header>
+
+	<section>
+		<h1>Ben jij klaar om
+			<span>uitgedaagd te worden?</span>
+		</h1>
+		<img class="lazy" src="./img/icons/cmd_icon_laptop.svg" data-src="./img/icons/cmd_icon_laptop.svg" alt="">
+		<p>
+			Deze minor leert je interactieve toepassingen maken met de webtechnologieën: HTML, CSS en JavaScript. In verschillende vakken
+			en projecten leer je over browsers, het ‘real time web’, internet of things, performance, rapid prototyping, usability,
+			documenteren, versiebeheer, debuggen, testen, responsive, reactive, micro interacties, API’s en nog veel meer.
+		</p>
+		<p>
+			De minor is bedoeld voor de studenten die een <em>uitdaging</em> zoeken, we starten vanaf een vrij hoog niveau en 40 uur werkweeken zijn de norm.
+		</p>
+	</section>
+
+	<figure>
+		<img class="lazy" src="./img/icons/cmd_icon_wifi.svg" data-src="./img/icons/cmd_icon_wifi.svg" alt="">
+	</figure>
+
+	<section class="informal">
+		<img src="./img/icons/cmd_hva_logo_black_full.png" alt="">
+		<p>
+			De minor wordt aangeboden door de opleiding CMD van de Hogeschool van Amsterdam. CMD Amsterdam is een ontwerpopleiding digital
+			design met drie focuspunten: interaction design, visual design en front-end development. De minor sluit aan bij het profiel
+			Front-end developer.
+		</p>
+	</section>
+
+	<h2 class="marker">Meningen</h2>
+
+	<div class="reviews">
+		<ul>
+			<li><img src="https://media.licdn.com/dms/image/C5603AQH8Yee1JL18nA/profile-displayphoto-shrink_100_100/0?e=1536796800&v=beta&t=58XFm9M3-UVsUb8FD1uBBpttFJrV-3FITwpeVRtxv-c" alt="photo of user">
+				<h2>ICT-Student</h2>
+				<p>Zelfs met de kennis die ik al had ben ik uitgedaagd.</p>
+			</li>
+			<li><img src="https://media.licdn.com/dms/image/C5603AQH8Yee1JL18nA/profile-displayphoto-shrink_100_100/0?e=1536796800&v=beta&t=58XFm9M3-UVsUb8FD1uBBpttFJrV-3FITwpeVRtxv-c" alt="photo of user">
+				<h2>CMD-Student</h2>
+				<p>Erg uitdagend, maar nu weet ik veel meer.</p>
+			</li>
+			<li><img src="https://media.licdn.com/dms/image/C5603AQH8Yee1JL18nA/profile-displayphoto-shrink_100_100/0?e=1536796800&v=beta&t=58XFm9M3-UVsUb8FD1uBBpttFJrV-3FITwpeVRtxv-c" alt="photo of user">
+				<h2>Economie-Student</h2>
+				<p>De projecten waren een goede test van onze skills.</p>
+			</li>
+		</ul>
+	</div>
+
+	
+	<section class="signup">
+		<h3>De feiten
+			<span>op een rijtje</span>
+		</h3>
+		<section class="feiten">
+			<ul>
+				<li>
+					<h3>8.7</h3>
+					<p>Volgens de studenten enquete</p>
+				</li>
+				<li>
+					<h3>8.3</h3>
+					<p>Voor het rooster en de faciliteiten</p>
+				</li>
+				<li>
+					<h3>9.5</h3>
+					<p>Voor de stelling ‘Ik ben uitgedaagd’</p>
+				</li>
+				<li>
+					<h3>9.0</h3>
+					<p>Volgens de docenten, feedback en begeleiding</p>
+				</li>
+			</ul>
+			<img src="./img/icons/cmd_totem_4.svg" alt="">
+		</section>
+
+	</section>
+
+	<div class="footer">
+		<a href="skills.html" class="marker button">Vereisten</a>
+		<a href="progamma.html" class="marker button">Progamma</a>
+	</div>
+
+	<script src="./bundle.js"></script>
+	<!-- <script async defer src="./yall.js"></script> -->
+</body>
+
+</html>
