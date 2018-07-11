@@ -3,29 +3,21 @@
 	"description": "",
 	"license": "MIT",
 	"scripts": {
-		"build":
-			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
+		"build": "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
 		"start": "yarn run dev",
-		"dev":
-			"parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html'",
+		"dev": "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html'",
 		"clean": "rimraf ./dist/*",
 		"copy": "copyfiles -u 1 ./src/img/**/** ./dist",
 		"copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
 		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
-		"build:js":
-			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
-		"build:css":
-			"postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
-		"watch:img":
-			"onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
-		"watch:js":
-			"watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
-		"watch:css":
-			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
+		"build:js": "browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
+		"build:css": "postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
+		"watch:img": "onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
+		"watch:js": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+		"watch:css": "postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
 		"watch:html": "onchange './src/*.html' -- yarn run build:html",
 		"watch:fonts": "onchange './src/fonts/*' -- yarn run copy:fonts",
-		"serve":
-			"browser-sync start --server -f './dist/*.html' './dist/styles/*' './dist/**/*' --ss ./dist --index ./dist/index.html"
+		"serve": "browser-sync start --server -f './dist/*.html' './dist/styles/*' './dist/**/*' --ss ./dist --index ./dist/index.html"
 	},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
@@ -52,5 +44,7 @@
 		"uncss": "^0.16.2",
 		"watchify": "^3.11.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"uglify-js": "^3.4.4"
+	}
 }
