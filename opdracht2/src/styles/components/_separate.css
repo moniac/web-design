@@ -141,31 +141,35 @@ p {
 	font-size: 2rem;
 	font-weight: bold;
 	margin-top: 4rem;
-	padding-left: 1rem;
+	padding-left: 2rem;
 }
 
 .uitdagen p {
-	padding-left: 1rem;
+	padding-left: 2rem;
 }
 
 .uitdagen h2 {
 	margin-bottom: 0.5rem;
 	font-weight: bold;
-	padding-left: 1rem;
+	padding-left: 2rem;
 }
 
 code {
 	background: #eee;
 	padding: 1rem;
+	padding-left: 2rem;
 	display: block;
 	margin-bottom: 1rem;
 }
 
 .skills {
 	font-weight: bold;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	cursor: pointer;
+	@media (--tablet) {
+		width: 50%;
+	}
 }
 
 .skills div {
@@ -183,7 +187,7 @@ code {
 }
 
 .skills details {
-	padding: 1rem;
+	padding: 1rem 0;
 	font-weight: normal;
 }
 

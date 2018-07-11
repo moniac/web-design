@@ -1,5 +1,6 @@
 .signup {
 	margin-bottom: 4rem;
+	margin-top: -4rem;
 
 	& .feiten {
 		display: flex;
@@ -17,7 +18,8 @@
 		color: var(--MainLightGray);
 		font-weight: bold;
 		margin: var(--Margin-Dynamic);
-		padding-top: 8rem;
+		padding-top: 4rem;
+		margin-bottom: 4rem;
 		line-height: 1.4;
 		display: block;
 

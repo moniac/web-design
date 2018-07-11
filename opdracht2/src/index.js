@@ -2,6 +2,8 @@ let interval
 
 const cta = document.querySelector('.cta')
 
+console.log(cta)
+
 if (cta) {
 	cta.addEventListener('click', function(e) {
 		function confetti() {

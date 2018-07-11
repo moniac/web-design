@@ -1,34 +1,35 @@
-body > section:first-of-type {
+body>section:first-of-type {
 	margin: var(--Margin-Dynamic);
 	margin-bottom: 2rem;
 	max-width: 40rem;
-
 	@media (--tablet) {
 		margin-left: auto;
 		margin-right: auto;
 	}
-
 	& h1 {
 		font-size: 1.6125rem;
+		@media (--tablet) {
+			font-size: 2.6125rem;
+		}
 		font-weight: 700;
 		color: var(--MainLightGray);
 		line-height: 1.4;
 		margin-bottom: 2rem;
 		letter-spacing: 0.05px;
-
 		& span {
 			font-size: 2.125rem;
+			@media (--tablet) {
+				font-size: 3.2125rem;
+			}
 			display: block;
 		}
 	}
-
 	& img {
 		text-align: center;
 		margin: 0 auto;
 		display: block;
 		margin-bottom: 2rem;
 	}
-
 	& p {
 		font-weight: normal;
 		color: var(--MainBlack);
