@@ -1,11 +1,11 @@
 body > section.informal {
 	margin: var(--Margin-Dynamic);
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 	max-width: 45rem;
 
 	@media (--tablet) {
 		margin: 0 auto;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 	}
 
 	& img {

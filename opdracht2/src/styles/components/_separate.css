@@ -1,7 +1,183 @@
-body > figure:first-of-type {
+body>figure:first-of-type {
 	background: var(--MainYellow);
 	text-align: center;
 	padding: 2rem;
 	padding-bottom: 1.8rem;
 	margin-bottom: var(--Margin-Bottom);
+	margin: 4rem 0;
+}
+
+.marker {
+	background: var(--MainYellow);
+	padding: var(--Padding-Dynamic);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	display: inline-block;
+	font-size: 1.6125rem;
+	font-weight: bold;
+	color: var(--MainLightGray);
+	margin-bottom: 2rem;
+	position: sticky;
+}
+
+.footer {
+	margin-top: 4rem;
+	display: block;
+	display: flex;
+	justify-content: space-around;
+}
+
+.marker.button {
+	border-radius: 2rem;
+	display: inline-block;
+	text-decoration: none;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 1.525rem;
+}
+
+.button:hover,
+.button:focus {
+	text-decoration: underline;
+	animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+@keyframes shake {
+	10%,
+	90% {
+		transform: translate3d(0px, -1px, 0);
+	}
+	20%,
+	80% {
+		transform: translate3d(0px, 2px, 0);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translate3d(0px, -4px, 0);
+	}
+	40%,
+	60% {
+		transform: translate3d(0px, 4px, 0);
+	}
+}
+
+.reviews {
+	margin: 2rem 0;
+}
+
+.reviews ul {
+	display: flex;
+	margin: 0 auto;
+	align-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+@media (min-width: 40rem) {
+	.reviews ul {
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+	}
+}
+
+.reviews h2 {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.reviews ul li {
+	margin: 1rem;
+}
+
+.reviews img {
+	border-radius: 50%;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.reviews p {
+	margin-bottom: 1rem;
+}
+
+.vereisten {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+@media (min-width: 40rem) {
+	.vereisten {
+		flex-direction: row;
+	}
+}
+
+.vereisten h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+.uitdagen h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 4rem;
+	padding-left: 1rem;
+}
+
+.uitdagen p {
+	padding-left: 1rem;
+}
+
+.uitdagen h2 {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+	padding-left: 1rem;
+}
+
+code {
+	background: #eee;
+	padding: 1rem;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.skills {
+	font-weight: bold;
+	width: 70%;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.skills div {
+	padding-top: 1rem;
+}
+
+.skills h3 {
+	font-weight: bold;
+}
+
+.skills summary {
+	background: var(--MainYellow);
+	padding: 1.5rem;
+	font-weight: bold;
+}
+
+.skills details {
+	padding: 1rem;
+	font-weight: normal;
+}
+
+em {
+	font-weight: bold;
 }

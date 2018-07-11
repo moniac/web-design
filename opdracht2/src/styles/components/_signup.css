@@ -32,20 +32,6 @@
 		}
 	}
 
-	& .marker {
-		background: var(--MainYellow);
-		padding: var(--Padding-Dynamic);
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		display: inline-block;
-		font-size: 1.6125rem;
-		font-weight: bold;
-		color: var(--MainLightGray);
-		margin-bottom: 2rem;
-		float: right;
-		display: block;
-	}
-
 	& form {
 		display: block;
 		max-width: 20rem;
