@@ -286,6 +286,14 @@ section h1 {
     width: 100%;
 }
 
+h1 {
+    padding: 2rem;
+}
+
+ul {
+    padding-left: 2rem;
+}
+
 aside {
     background: red;
     transform: translateY(-100vh);
@@ -297,6 +305,14 @@ aside {
     z-index: 3;
     /* visibility: hidden;
     display: none; */
+}
+
+.close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    color: white;
+    font-size: 2rem;
 }
 
 aside svg {

@@ -29,6 +29,7 @@ const view = {
 	},
 	tagButtons() {
 		const label = document.querySelector('aside svg');
+		const close = document.querySelector('.close')
 		let newButton = document.createElement('a');
 		newButton.className = 'button';
 		newButton.innerHTML = '+';
@@ -53,6 +54,11 @@ const view = {
 		label.addEventListener('click', function(e) {
 			this.parentElement.style.transform = 'translateY(0)';
 			document.querySelector('body').style.overflowY = 'hidden';
+		});
+
+		close.addEventListener('click', function(e) {
+			this.parentElement.style.transform = 'translateY(-100%)';
+			document.querySelector('body').style.overflowY = 'scroll';
 		});
 	},
 	toggleCookie() {
