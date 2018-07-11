@@ -40,11 +40,13 @@ Marie just wants to get her job done without too many complications, she enjoys 
 
 ---
 
-## Breaking it down
+## The challenge
 
 It's not a secret that most websites and designs employ a lot of 'visual' noise. Empty/white space gets filled up by either text or graphics.
 
 This means that for my product I will have to find a balance between just enough and too much text.
+
+How do you communicate enough information that someone understands what it is that you offer but without communicating too much?
 
 ---
 
