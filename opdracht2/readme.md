@@ -17,12 +17,26 @@ This is a project where the website that I am making will be geared towards peop
 
 ## User scenario's
 
-Friend - ICT student
-I want to be able to get a good impression of the minor and sign up for it.
+Friend Govand - ICT student
+I am a second year ICT student and want to know if the minor Web Development is relevant and challenging for me.
+
+### User needs
+
+* What is the minor?
+* What is to be expected of me?
+* What will be the subjects?
+* What do they teach me?
 
 Marie - Graphic Designer - Deaf
 
 I want the website to be to the point and to get my job done (sign up for the minor).
+
+### User needs
+
+Marie just wants to get her job done without too many complications, she enjoys it if a website is structured properly.
+
+* How can I navigate through?
+* What is the least bit of informationt that I need to do my job?
 
 ---
 

@@ -119,6 +119,15 @@ body>figure:first-of-type {
 	}
 }
 
+.vereisten ul {
+	background: var(--MainYellow);
+	padding: 1rem;
+}
+
+.vereisten ul li {
+	border-bottom: 1px solid black;
+}
+
 .vereisten h1 {
 	font-size: 2rem;
 	font-weight: bold;
