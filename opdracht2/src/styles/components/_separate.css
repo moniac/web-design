@@ -122,10 +122,11 @@ body>figure:first-of-type {
 .vereisten ul {
 	background: var(--MainYellow);
 	padding: 1rem;
+	margin-left: 1rem;
 }
 
 .vereisten ul li {
-	border-bottom: 1px solid black;
+
 }
 
 .vereisten h1 {
@@ -135,6 +136,26 @@ body>figure:first-of-type {
 
 p {
 	margin: 1rem 0;
+}
+
+@media (min-width: 40rem) {
+	.vereisten {
+		/* max-width: 80%; */
+	}
+	.uitdagen {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 60rem) {
+	.vereisten {
+		justify-content: center;
+	}
+	.uitdagen {
+		max-width: 50%;
+		margin: 0 auto;
+	}
 }
 
 .uitdagen h1 {
@@ -192,5 +213,38 @@ code {
 }
 
 em {
+	font-weight: bold;
+}
+
+body {
+	border-bottom: 4rem solid var(--MainYellow);
+	min-height: 100vh;
+}
+
+html {
+	min-height: 100vh;
+}
+
+.call {
+	background: var(--MainYellow);
+	padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+	.call {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 60rem) {
+	.call {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+}
+
+.call h3 {
+	font-size: 2rem;
 	font-weight: bold;
 }
