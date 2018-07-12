@@ -67,7 +67,14 @@ Op deze pagina kunnen bezoekers kort lezen en zien welke vakken er van pas komen
 
 Op deze pagina kunnen de mensen wat algemene informatie lezen wanneer ze hun keuze weten. Ze kunnen mailen naar een e-mailadres of het formulier gebruiken. Het formulier spuugt confettie uit na het invullen, als kleine verassing.s
 
+### Testen met Govand - 2
 
+* Fijn om de reviews van studenten te kunnen zien
+* Navigatie aan de onderkant is best slim, hoe bepaal je waar je naar toe gaat?
+* Code examples zijn gaaf ... dan zie je wat er gedaan wordt
+* Best veel geel (?)
+* Website is gestructureerd
+* Confetti is vet random maar wel grappig
 
 ---
 

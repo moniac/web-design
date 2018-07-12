@@ -4,7 +4,9 @@
 
 ## General
 
-The idea of this project is to make a website where someone can add movies to a 'must watch later' list.
+Het idee van de website is dat iemand een film kan toevoegen aan een 'kijk later' lijst.
+
+De core functionality in dit geval is het kunnen klikken en tonen van een lijstje.
 
 ## Verkregen feedback
 
@@ -21,6 +23,26 @@ The idea of this project is to make a website where someone can add movies to a 
 1. Waarom is er geen titel?
 
 2. Ik kan het menu niet sluiten? (Oeps)
+
+## Aanpassingen
+
+![improvement](./design/1.png)
+
+De button wordt nu groen en een checkmark als je er op klikt, en de achtergrond wordt transparant. Hierdoor is het wat duidelijker dat hier al op geklikt is.
+
+---
+
+![label](design/label.png)
+
+De label komt nu na een kleine delay naar beneden in plaats van onmiddelijk.
+
+---
+
+![label](design/title.png)
+
+Er is nu een titel toegevoegd
+
+---
 
 ## Principes
 

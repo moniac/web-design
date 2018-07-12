@@ -42,13 +42,15 @@ const view = {
 			newButton.className = 'button';
 			newButton.innerHTML = '+';
 
-			newButton.addEventListener('click', () => {
+			newButton.addEventListener('click', (e) => {
 				this.toggleCookie();
 				label.style.transform = 'translateY(0)';
+				e.target.parentElement.style.opacity = '0.5'
+				e.target.innerHTML = '✓'
+				e.target.style.background = 'green'
 			});
 
 			card.insertAdjacentElement('afterbegin', newButton);
-			console.log(card, i);
 		});
 
 		label.addEventListener('click', function(e) {
